@@ -1,1 +1,1 @@
-proj
+#An web automation project which uses technologies like playwright
