@@ -1,0 +1,23 @@
+{
+  "name": "ibyte-bank-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swapnilV103/IByte-Bank-Automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swapnilV103/IByte-Bank-Automation/issues"
+  },
+  "homepage": "https://github.com/swapnilV103/IByte-Bank-Automation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0"
+  }
+}
