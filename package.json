@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/swapnilV103/IByte-Bank-Automation#readme",
   "devDependencies": {
-    "@playwright/test": "^1.60.0"
+    "@cucumber/cucumber": "^13.0.0",
+    "@playwright/test": "^1.60.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
   }
 }
