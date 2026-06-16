@@ -13,5 +13,6 @@ Before(async function (this:MyWorld) {
 });
 
 After(async function (this:MyWorld){
+    await this.context.close();
     await this.browser.close();
 })
