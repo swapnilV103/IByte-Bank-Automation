@@ -5,7 +5,9 @@ export class AccountOverviewPage {
   constructor(private readonly page: Page) {}
 
   async verifyAccountOverviewDisplayed() {
-    await expect(this.page.locator("h1")).toContainText("Accounts Overview");
+    await expect(
+      this.page.getByRole("heading", { name: "Accounts Overview" })
+    ).toBeVisible();
   }
 
   async printAccountBalance() {

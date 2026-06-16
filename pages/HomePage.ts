@@ -1,5 +1,5 @@
 import type { Locator, Page } from "@playwright/test";
-import { config } from "../config/config.js";
+import { config } from "../config/config";
 
 export class HomePage {
 
@@ -8,6 +8,8 @@ export class HomePage {
   private readonly passwordInput: Locator;
   private readonly loginButton: Locator;
   private readonly logoutLink: Locator;
+  private readonly overviewLink: Locator;
+
 
 
   constructor(private readonly page: Page) {
@@ -16,6 +18,7 @@ export class HomePage {
     this.usernameInput = page.locator("input[name='username']");
     this.passwordInput = page.locator("input[name='password']");
     this.loginButton = page.locator("input[value='Log In']");
+    this.overviewLink = page.locator("text=Accounts Overview");
   }
 
   async goto() {
@@ -36,4 +39,11 @@ export class HomePage {
     await this.passwordInput.fill(password);
     await this.loginButton.click();
   }
+
+  async clickOverviewLink() {
+    await this.page.getByRole("link", {
+        name: "Accounts Overview"
+    }).click();
+}
+
 }

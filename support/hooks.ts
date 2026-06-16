@@ -1,6 +1,6 @@
 import {Before , After} from "@cucumber/cucumber";
 import {chromium} from "@playwright/test";
-import {MyWorld} from "./world.js";
+import {MyWorld} from "./world";
 
 Before(async function (this:MyWorld) {
     this.browser = await chromium.launch({

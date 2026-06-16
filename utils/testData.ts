@@ -1,5 +1,5 @@
 export function generateUsername(): string {
-    return `swapnil_${Date.now()}`;
+    return `swapnil${Math.floor(Math.random() * 100000)}`;
   }
   
   export function generatePassword(): string {

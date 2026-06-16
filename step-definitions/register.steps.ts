@@ -1,11 +1,11 @@
 import { Given, When, Then } from "@cucumber/cucumber";
-import { MyWorld } from "../support/world.js";
-import { HomePage } from "../pages/HomePage.js";
-import { RegisterPage } from "../pages/RegisterPage.js";
-import { AccountOverviewPage } from "../pages/AccountOverview.js";
-import { generateUsername, generatePassword } from "../utils/testData.js";
+import { MyWorld } from "../support/world";
+import { HomePage } from "../pages/HomePage";
+import { RegisterPage } from "../pages/RegisterPage";
+import { AccountOverviewPage } from "../pages/AccountOverview";
+import { generateUsername, generatePassword } from "../utils/testData";
 
-
+console.log("REGISTER.STEPS.TS LOADED");
 Given("the user is on the Parabank home page", async function (this: MyWorld) {
     const homePage = new HomePage(this.page);
   
@@ -34,6 +34,7 @@ Given("the user is on the Parabank home page", async function (this: MyWorld) {
       const homePage = new HomePage(this.page);
   
       await homePage.login(this.username, this.password);
+      await homePage.clickOverviewLink();
     }
   );
 
